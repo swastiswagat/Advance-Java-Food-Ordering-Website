@@ -42,6 +42,36 @@ nav ul li a {
 nav ul li a:hover {
     color: #f0f0f0;
 }
+
+.notification {
+    visibility: hidden; /* Hidden by default */
+    min-width: 250px;
+    margin: 0 auto;
+    background-color: rgb(76, 175, 80); /* Green for success */
+    color: white;
+    text-align: center;
+    padding: 16px;
+    position: fixed;
+    top: 20px; /* Position at the top */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.notification.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.notification.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
 .hero {
     text-align: center;
     padding: 50px 20px;
@@ -68,9 +98,9 @@ nav ul li a:hover {
 .image-section {
     position: relative;
     display: inline-block;
-    width: 100%;  /* Ensure the image section takes full width */
+    width: 100%;
     max-width: 800px;
-    margin: 0 auto; /* Center the image section */
+    margin: 0 auto;
     margin-top: 30px;
 }
 
