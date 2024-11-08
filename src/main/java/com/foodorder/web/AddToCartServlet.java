@@ -38,7 +38,6 @@ public class AddToCartServlet extends HttpServlet {
         }
         response.sendRedirect("cart.jsp");
     }
-
     private void saveItemToDatabase(String sessionId, String itemId, String itemName, int quantity, double total) throws SQLException {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             String sql = "INSERT INTO cart_items (session_id, item_id, item_name, quantity, total) VALUES (?, ?, ?, ?, ?)";
