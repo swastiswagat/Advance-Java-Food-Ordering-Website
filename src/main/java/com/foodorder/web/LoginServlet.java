@@ -21,6 +21,7 @@ public class LoginServlet extends HttpServlet {
     private String jdbcUsername = "root";
     private String jdbcPassword = "swasti@5121";
 
+    
     public LoginServlet() {
         super();
     }
