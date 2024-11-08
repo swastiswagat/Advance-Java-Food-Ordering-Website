@@ -219,12 +219,10 @@
 <script>
     function addToCart(itemName, quantity) {
         alert(quantity + ' ' + itemName + '(s) added to cart.');
-        // Here you can add the logic to update the cart in the backend
     }
 
     function orderNow(itemName) {
         alert('Ordering ' + itemName);
-        // Here you can add the logic for ordering the item directly
     }
 </script>
 
