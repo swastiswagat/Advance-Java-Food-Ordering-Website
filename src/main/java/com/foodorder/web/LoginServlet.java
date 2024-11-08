@@ -24,7 +24,6 @@ public class LoginServlet extends HttpServlet {
     public LoginServlet() {
         super();
     }
-
     private Connection getConnection() throws SQLException {
         Connection connection = null;
         try {
