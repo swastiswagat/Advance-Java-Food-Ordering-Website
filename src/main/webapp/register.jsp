@@ -34,6 +34,15 @@
             max-width: 400px;
             box-sizing: border-box;
         }
+        
+        .register-container img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            width: 100px;
+            height: 100px; 
+            border-radius: 50%;
+            }
 
         form {
             display: flex;
@@ -103,24 +112,48 @@
         }
     </style>
 </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
 <body>
     <header>
         <h1>Register</h1>
     </header>
     <div class="register-container">
-        <form action="UserServlet" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        <div class="login-container">
+            <img src="assets/logo.png" alt="Food Order Logo">
+            <form action="UserServlet" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Register</button>
+            </form>
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            
-            <button type="submit">Register</button>
-        </form>
-        <p>Already have an account? <a href="login.jsp">Login here</a></p>
+            <%
+                String error = request.getParameter("error");
+                if ("duplicate".equals(error)) {
+            %>
+                <p style="color: red; text-align: center;">This email is already registered. Please use a different email.</p>
+            <% } else if ("true".equals(error)) { %>
+                <p style="color: red; text-align: center;">Registration failed. Please try again.</p>
+            <% } %>
+
+            <%
+                String success = request.getParameter("success");
+                if ("true".equals(success)) {
+            %>
+                <p style="color: green; text-align: center;">Registration successful. <a href="login.jsp">Login here</a>.</p>
+            <% } %>
+
+            <p>Already have an account? <a href="login.jsp">Login here</a></p>
+        </div>
     </div>
     <footer>
         <p>&copy; 2024 Food Order System</p>
