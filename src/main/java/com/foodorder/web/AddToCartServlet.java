@@ -24,23 +24,19 @@ public class AddToCartServlet extends HttpServlet {
         HttpSession session = request.getSession();
         String sessionId = session.getId();
         
-        // Retrieve item details from request parameters
         String itemId = request.getParameter("item_id");
         String itemName = request.getParameter("item_name");
         int quantity = Integer.parseInt(request.getParameter("quantity"));
         double total = Double.parseDouble(request.getParameter("total"));
 
         try {
-            // Save item to database
             saveItemToDatabase(sessionId, itemId, itemName, quantity, total);
         } catch (SQLException e) {
             e.printStackTrace();
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Database error during add to cart.");
             return;
         }
-
-        // Redirect back to the cart page or show success message
-        response.sendRedirect("cart.jsp"); // Redirect to the cart page
+        response.sendRedirect("cart.jsp");
     }
 
     private void saveItemToDatabase(String sessionId, String itemId, String itemName, int quantity, double total) throws SQLException {
