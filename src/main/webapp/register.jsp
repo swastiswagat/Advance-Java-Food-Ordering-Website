@@ -46,6 +46,7 @@
             color: #333;
         }
 
+
         input[type="text"],
         input[type="email"],
         input[type="password"] {

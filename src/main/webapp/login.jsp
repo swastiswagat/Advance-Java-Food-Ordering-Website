@@ -126,7 +126,7 @@
                 }
             %>
 
-            <!-- Error message display -->
+            
             <%
                 String error = request.getParameter("error");
                 if ("true".equals(error)) {

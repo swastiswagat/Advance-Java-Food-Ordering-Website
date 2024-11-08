@@ -111,7 +111,7 @@
 }
 
 .menu-item button + button {
-    margin-top: 5px; /* Separate the buttons */
+    margin-top: 5px; 
 }
 
 .menu-item .quantity-section {
