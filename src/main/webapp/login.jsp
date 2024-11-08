@@ -139,10 +139,7 @@
             <%
                 }
             %>
-<<<<<<< HEAD
 
-=======
->>>>>>> branch 'master' of https://github.com/swastiswagat/Advance-Java-Food-Ordering-Website.git
             
             <%
                 String error = request.getParameter("error");

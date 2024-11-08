@@ -136,6 +136,7 @@
                 <button type="submit">Register</button>
             </form>
             
+            
             <%
                 String error = request.getParameter("error");
                 if ("duplicate".equals(error)) {

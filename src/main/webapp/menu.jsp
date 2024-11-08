@@ -264,6 +264,7 @@ footer {
     </div>
 </div>
 
+
 <form id="cartForm" action="CartServlet" method="POST" style="display: none;">
     <input type="hidden" name="itemName" id="cartItemName">
     <input type="hidden" name="quantity" id="cartQuantity">
