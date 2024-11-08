@@ -36,6 +36,15 @@
             box-sizing: border-box;
         }
 
+        .login-container img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            width: 100px;
+            height: 100px; 
+            border-radius: 50%;
+        }
+
         form {
             display: flex;
             flex-direction: column;
@@ -101,18 +110,23 @@
         }
     </style>
 </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
 <body>
     <header>
         <h1>Login</h1>
     </header>
     <div class="login-container">
-        <form action="UserServlet" method="post">
+        <img src="assets/logo.png" alt="Food Order Logo">
+
+        <form action="LoginServlet" method="post">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
             
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>        
-            <!-- Success message display -->
             <%
                 String success = request.getParameter("success");
                 if ("true".equals(success)) {
@@ -125,16 +139,13 @@
             <%
                 }
             %>
-
-            <!-- Error message display -->
+            
             <%
                 String error = request.getParameter("error");
                 if ("true".equals(error)) {
             %>
                 <p style="color: red; text-align: center;">Invalid email or password. Please try again.</p>
-            <%
-                }
-            %>
+            <% } %>
 
             <button type="submit">Login</button>
         </form>
