@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-
+    
     private String jdbcURL = "jdbc:mysql://localhost:3306/food_order_db";
     private String jdbcUsername = "root";
     private String jdbcPassword = "swasti@5121";
@@ -24,6 +24,7 @@ public class LoginServlet extends HttpServlet {
     public LoginServlet() {
         super();
     }
+
     private Connection getConnection() throws SQLException {
         Connection connection = null;
         try {
