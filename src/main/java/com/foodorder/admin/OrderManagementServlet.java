@@ -15,9 +15,7 @@ public class OrderManagementServlet extends HttpServlet {
         String action = request.getParameter("action");
         
         if ("view".equals(action)) {
-            // Code to view orders
         } else if ("updateStatus".equals(action)) {
-            // Code to update order status
         }
         
         response.sendRedirect("ManageOrders.jsp");

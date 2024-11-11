@@ -20,3 +20,4 @@ public class AdminLogoutServlet extends HttpServlet {
         response.sendRedirect("AdminLogin.jsp");
     }
 }
+ 
