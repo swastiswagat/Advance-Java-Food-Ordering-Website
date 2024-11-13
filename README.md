@@ -40,7 +40,7 @@ This project is a **Food Ordering Website** developed as part of an Advanced Jav
 - **Database Configuration**: Connection handled via JDBC for secure database interactions.
 
 ## Team Members and LinkedIn Profiles:
-- [Group Member 1 - LinkedIn]([<LinkedIn-link-member1>](https://www.linkedin.com/in/swasti-swagat-492018270/))
+- [Group Member 1 - https://www.linkedin.com/in/swasti-swagat-492018270/]
 - [Group Member 2 - LinkedIn](<LinkedIn-link-member2>)
 - [Group Member 3 - LinkedIn](<LinkedIn-link-member3>)
 
