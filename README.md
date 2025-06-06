@@ -45,4 +45,6 @@ This project is a **Food Ordering Website** developed as part of an Advanced Jav
 - [Group Member 3 - LinkedIn](<LinkedIn-link-member3>)
 
 ## License:
+This project is open-source and available under the [MIT License](LICENSE).
+
 
